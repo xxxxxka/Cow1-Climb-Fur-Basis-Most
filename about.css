@@ -1,0 +1,52 @@
+#about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(255, 204, 0, 0.8); /* Subtle glow effect */
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto 40px; /* Center the paragraph with margin */
+}
+
+.artist-container {
+    display: flex;
+    justify-content: center; /* Center align the artist cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between cards */
+}
+
+.artist-card {
+    background-color: #1e1e1e; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 250px; /* Fixed width for cards */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.artist-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.artist-image {
+    width: 100%; /* Make images responsive */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below image */
+}
+
+body {
+    background-color: #000; /* Set the background color to black */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a default font */
+    color: #ffffff; /* Set default text color to white for readability */
+}
+

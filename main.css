@@ -28,6 +28,32 @@ header {
     padding: 20px 0;
     text-align: center;
 }
+header h1 {
+    position: relative; /* Allows for positioning of pseudo-elements */
+    color: #00fff2; /* Neon yellow color */
+    font-size: 3rem; /* Increase font size */
+    text-shadow: 0 0 10px rgba(0, 255, 234, 0.7); /* Glowing effect */
+    animation: flicker 1s infinite; /* Flicker animation */
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    20% {
+        opacity: 0.7; /* Slightly transparent */
+    }
+    40% {
+        opacity: 1; /* Fully visible */
+    }
+    60% {
+        opacity: 0.7; /* Slightly transparent */
+    }
+    80% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
 
 header h1 {
     margin-bottom: 10px;
@@ -98,14 +124,50 @@ h2 {
     margin-bottom: 20px;
 }
 
-.music-list {
-    display: flex;
-    flex-direction: column;
+#hover-button {
+    position: relative; /* Position relative for absolute positioning of links */
+    text-align: center; /* Center align content */
+    margin: 40px 0; /* Spacing around the section */
 }
 
-.track {
-    margin-bottom: 20px;
+.invisible-button {
+    padding: 10px 20px; /* Padding for the button area */
+    background-color: #ff9800; /* Background color for visibility */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    display: inline-block; /* Inline-block for sizing */
 }
+
+.link-list {
+    display: none; /* Initially hide the link list */
+    position: absolute; /* Position absolutely within the relative parent */
+    top: 100%; /* Position below the button */
+    left: 50%; /* Center align */
+    transform: translateX(-50%); /* Adjust for centering */
+    background: white; /* Background for the dropdown */
+    border: 1px solid #ccc; /* Border for the dropdown */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    z-index: 100; /* Ensure it appears above other content */
+}
+
+.link-list a {
+    display: block; /* Block display for links */
+    padding: 10px; /* Padding for links */
+    color: #333; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.link-list a:hover {
+    background-color: #f0f0f0; /* Hover effect for links */
+}
+
+.invisible-button:hover + .link-list,
+.link-list:hover {
+    display: block; /* Show links on hover */
+}
+
 
 .gallery {
     display: flex;
