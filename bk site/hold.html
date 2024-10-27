@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Xurrka</title>
+    <link rel="stylesheet" href="xurrka.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="glow">Xurrka</h1>
+        <p class="tagline">"Crafting soundscapes that tell stories."</p>
+    </header>
+    
+    <section class="profile-section">
+        <img src="xurrka.jpg" alt="Xurrka" class="profile-image hover-animation">
+        <div class="profile-info">
+            <h2>Who is Xurrka?</h2>
+            <p>Xurrka is an emerging artist known for his rich, atmospheric sound and storytelling ability. His music blends different genres to create immersive experiences that resonate with listeners.</p>
+            <p>With a passion for experimentation and creativity, Xurrka aims to redefine the boundaries of music and inspire his audience.</p>
+            <p>"xurrka flow wa goin"</p>
+            <a href="https://xurrka.com" class="glow-button">Link to xurrka.com</a>
+        </div>
+    </section>
+    
+
+    <section class="music-section">
+        <h2>Music</h2>
+        <p>Explore some of Xurrka's latest tracks:</p>
+        <div class="soundcloud-embed more-from-us"></div>
+            <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/xurrka/dear-ka&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/xurrka&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+    </section>
+
+    <footer class="footer">
+        <p>Follow Xurrka on social media:</p>
+        <div class="social-links">
+            <a href="https://instagram.com/xurrrka" target="_blank">Instagram</a>
+            <a href="https://soundcloud.com/xurrka" target="_blank">SoundCloud</a>
+            <a href="xurrka@blakkatz.art" target="_blank">Email Me!</a>
+        </div>
+        <p>&copy; 2025 blakkatz. All rights reserved.</p>
+        <div class="glowing-icon">
+            <a href="index.html">
+                <img src="logo.png" alt="Your Icon" class="icon">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark steel background */
+    color: #d0d0d0; /* Light steel text color */
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background: linear-gradient(145deg, #3a3a3a, #1f1f1f); /* Steel gradient */
+    color: #e6e6e6;
+    padding: 80px 20px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #777777;
+}
+
+/* Steel Glow */
+.glow {
+    font-size: 3.5em;
+    text-shadow: 0 0 12px #e1e1e1, 0 0 24px #bdbdbd, 0 0 36px #ffffff;
+    color: #e6e6e6;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Tagline */
+.tagline {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 80%;
+    background: #2b2b2b; /* Dark steel background */
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1), 0 4px 15px rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border: 1px solid #555555;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile Image */
+.profile-image {
+    width: 180px;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.profile-image.hover-animation:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.1);
+}
+
+/* Highlight Section */
+.highlight-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 80%;
+    color: #e6e6e6;
+}
+
+.highlight-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.highlight-item {
+    background: linear-gradient(145deg, #333333, #1a1a1a);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    border: 1px solid #666666;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.highlight-item img {
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.highlight-item:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #444444, #222222);
+}
+
+/* Music Section */
+.music-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 80%;
+    background: linear-gradient(145deg, #2d2d2d, #1b1b1b);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1), 0 4px 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #555555;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px 0;
+    background: #1f1f1f;
+    border-top: 2px solid #777777;
+}
+
+.social-links img {
+    width: 28px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(50%); /* Steel effect */
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+

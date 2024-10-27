@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Dark background */
+    color: #fff; /* Default text color */
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-image: url('4ge.jpg'), linear-gradient(90deg, #000000, #fbff00);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden; /* Ensure pseudo-element stays within the header */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust this value for opacity */
+    z-index: 1; /* Position the overlay above the image but below text */
+}
+
+header h1,
+header p {
+    position: relative; /* Ensure text appears above overlay */
+    z-index: 2; /* Position text above the overlay */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem; /* Increased font size */
+    color: #fff; /* White text */
+    text-shadow: 0 2px 5px rgba(0, 255, 242, 0.8); /* Glow effect */
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.5rem; /* Increased font size */
+    opacity: 0.8; /* Slight transparency */
+}
+
+
+#music {
+    padding: 20px;
+}
+
+.track-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows tracks to wrap */
+    gap: 20px; /* Space between tracks */
+    justify-content: center; /* Center align tracks */
+}
+
+.track-card {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    padding: 15px; /* Padding inside the card */
+    text-align: center; /* Center text */
+    width: 250px; /* Fixed width for each track card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth animations */
+    position: relative; /* For pseudo-element */
+    overflow: hidden; /* To hide overflow */
+}
+
+.track-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 204, 0, 0.2); /* Light yellow overlay */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s; /* Smooth transition for overlay */
+}
+
+.track-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 24px rgba(255, 204, 0, 0.5); /* Glow effect */
+}
+
+.track-card:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.album-art {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.track-card:hover .album-art {
+    transform: scale(1.05); /* Slightly enlarge album art */
+}
+
+audio {
+    width: 100%; /* Full width audio player */
+    margin-top: 10px; /* Space above audio player */
+    background-color: #1e1e1e; /* Dark background for audio player */
+    border: 2px solid #ffcc00; /* Neon yellow border */
+    border-radius: 5px; /* Rounded corners for player */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000; /* Dark footer */
+    color: #fff; /* White text in footer */
+    border-top: 3px solid #000000; /* Neon yellow border */
+    position: relative;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Shadow for footer */
+}
+
+/* Add a subtle keyframe animation for the header */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgb(238, 255, 0), 0 0 20px rgba(255, 204, 0, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgb(217, 255, 0), 0 0 40px rgba(255, 204, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgb(238, 255, 0), 0 0 20px rgba(255, 204, 0, 0.3);
+    }
+}
+
+header h1 {
+    animation: glow 1.5s infinite; /* Apply the glow animation */
+}
+
+.glowing-icon {
+    text-align: center; /* Center align the icon */
+    margin: 20px 0; /* Space above and below the icon */
+}
+
+.icon {
+    width: 100px; /* Adjust the size of the icon */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s, filter 0.3s; /* Smooth animation */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8)) 
+            drop-shadow(0 0 10px rgb(255, 255, 0, 0.8)); /* Glow effect */
+}
+

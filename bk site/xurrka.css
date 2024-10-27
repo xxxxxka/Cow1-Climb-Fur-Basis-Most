@@ -1,0 +1,184 @@
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark steel background */
+    color: #e6e6e6; /* Light steel text color */
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background: linear-gradient(145deg, #3a3a3a, #1f1f1f); /* Steel gradient */
+    color: #e6e6e6;
+    padding: 80px 20px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #777777;
+    background-image: url('4ge.jpg'); /* Change to your banner image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Steel Glow */
+.glow {
+    font-size: 3.5em;
+    text-shadow: 0 0 12px #e1e1e1, 
+                 0 0 24px #bdbdbd, 
+                 0 0 36px #ffffff;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Tagline */
+.tagline {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-style: italic;
+    color: #b0b0b0;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 80%;
+    background: #2b2b2b; /* Dark steel background */
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1), 0 4px 15px rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border: 1px solid #555555;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile Image */
+.profile-image {
+    width: 200px; /* Adjusted to match the size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: round corners */
+    margin-right: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.profile-image.hover-animation:hover {
+    transform: scale(1.05) rotate(2deg); /* Scale and rotate on hover */
+    filter: brightness(1.1); /* Brighten the image */
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3); /* Add shadow */
+}
+
+/* Highlight Section */
+.highlight-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 80%;
+    color: #e6e6e6;
+}
+
+.highlight-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.highlight-item {
+    background: linear-gradient(145deg, #333333, #1a1a1a);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    border: 1px solid #666666;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.highlight-item img {
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.highlight-item:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #444444, #222222);
+}
+
+/* Music Section */
+.music-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 80%;
+    background: linear-gradient(145deg, #2d2d2d, #1b1b1b);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1), 0 4px 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #555555;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px 0;
+    background: #1f1f1f;
+    border-top: 2px solid #777777;
+}
+
+.social-links img {
+    width: 28px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(50%); /* Steel effect */
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #eeff02;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Glowing Icon */
+.glowing-icon {
+    margin-top: 20px;
+}
+
+.glowing-icon a {
+    display: inline-block;
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    overflow: hidden;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+/* Glowing effect on hover */
+.glowing-icon a:hover .icon {
+    transform: scale(1.1); /* Slightly enlarge the icon */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                0 0 20px rgba(255, 165, 0, 0.8), 
+                0 0 30px rgba(255, 140, 0, 0.8);
+}

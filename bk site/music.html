@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <title>Music</title>
+</head>
+<body>
+    <header>
+        <h1>blakkatz</h1>
+        <p>Explore the latest tracks from blakkatz.</p>
+    </header>
+
+    <section id="music">
+        <h2 class="featured-title">Featured Tracks</h2>
+        <div class="soundcloud-embed featured-tracks">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/blakkatz&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/z30nlol/dropbox-lyoko?si=bf79787e776e4e67954c407249681c1d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/xurrka/dear-ka?si=1a98f0cc20154d4a826c614058a0d575&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+        </div>
+        
+        <h2 class="more-from-us-title">More from us</h2>
+        <div class="soundcloud-embed more-from-us">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/anarkhyw/what-couldve-been-of-us-9am?in=anarkhyw/sets/9am-collab&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/lyokooo/still-me-prod-doctor?si=2dd5d285e3e44afb9218302d6f58b188&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/1slug/jgnetworth?si=77d7f5fb57344b03ab607917b1eb7d31&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/sadballmane/1zani_hotmelody?si=f2c43ed56988477e8ea969be4e46a826&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/t6n6/part-ways?si=af14f3b6fd8c41668344f1856dd96e27&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/downfxxl/m0lli-bk-fff-prod?si=d210e32a04be49cca9338403027747f8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+            </iframe>
+        </div>
+    </section>
+    
+    <style>
+        #music {
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .featured-title {
+            color: #FF4500; /* Fire color */
+            text-shadow: 0 0 5px #FF4500, 0 0 10px #FF6347, 0 0 15px #FF6347; /* Glowing effect */
+            font-size: 2em;
+        }
+    
+        .featured-tracks {
+            background: linear-gradient(135deg,#000000, #eeff02); /* Gradient background */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    
+        .more-from-us-title {
+            color: gold; /* Gold color */
+            text-shadow: 0 0 5px gold, 0 0 10px #FFD700, 0 0 15px #FFD700; /* Glowing effect */
+            font-size: 2em;
+        }
+    
+        .more-from-us {
+            background: linear-gradient(135deg,#000000 , #00ffff); /* Light gold gradient */
+            padding: 15px;
+            border-radius: 10px;
+        }
+    
+        /* Glowing banner effect */
+        #music::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(135deg, #202020, #000000); /* Yellow to blue gradient */
+            border-radius: 15px;
+            z-index: -1;
+            filter: blur(15px); /* Blur for glowing effect */
+            opacity: 0.7; /* Adjust opacity for softness */
+        }
+    </style>
+    
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 blakkatz. All rights reserved.</p>
+    </footer>
+    <div class="glowing-icon">
+        <a href="index.html">
+        <img src="logo.png" alt="Your Icon" class="icon">
+    </div>
+</body>
+</html>
